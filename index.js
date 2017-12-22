@@ -1,4 +1,4 @@
-/* jshint node: true */
+/* eslint node: true */
 'use strict';
 var blessCss = require('./lib/bless-css.js');
 
@@ -20,8 +20,8 @@ module.exports = {
 module.exports.blessCss = blessCss;
 
 function getOptions(addonContext) {
-  var baseOptions = (addonContext.parent && addonContext.parent.options) || (addonContext.app && addonContext.app.options),
-    options = baseOptions && baseOptions['bless'] || {
+  var baseOptions = (addonContext.parent && addonContext.parent.options) || (addonContext.app && addonContext.app.options);
+  var options = baseOptions && baseOptions['bless'] || {
       cacheBuster: true,
       cleanup: true,
       compress: false,
